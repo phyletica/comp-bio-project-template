@@ -1,0 +1,43 @@
+// Dev container for BIOL 5/6800 (Intro to Computational Biology).
+// GitHub Codespaces reads this file to set up each student's codespace:
+// an Ubuntu machine with git, plus pixi for managing project environments.
+{
+    "name": "Intro to Comp Bio",
+
+    // Microsoft's base Ubuntu image (includes git, curl, and a non-root
+    // "vscode" user).
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+    // Install a pinned version of pixi (a single executable) from its GitHub
+    // releases. Pinning the version means every student gets the same pixi.
+    "onCreateCommand": "sudo curl -fsSL -o /usr/local/bin/pixi https://github.com/prefix-dev/pixi/releases/download/v0.82.0/pixi-$(uname -m)-unknown-linux-musl && sudo chmod +x /usr/local/bin/pixi && echo 'eval \"$(pixi completion --shell bash)\"' >> ~/.bashrc && pixi --version",
+
+    // If the repository already has a pixi.toml, build its environment so it
+    // is ready when the student opens the codespace. Otherwise do nothing.
+    "postCreateCommand": "if [ -f pixi.toml ]; then pixi install; fi",
+
+    // marimo's default port. When marimo starts, Codespaces forwards this
+    // port and opens the notebook editor in a new browser tab. Forwarded
+    // ports are private by default: only the codespace's owner can open them.
+    "forwardPorts": [2718],
+    "portsAttributes": {
+        "2718": {
+            "label": "marimo",
+            "onAutoForward": "openBrowser"
+        }
+    },
+
+    // The smallest (2-core) machine is plenty and uses the fewest free hours.
+    "hostRequirements": {
+        "cpus": 2
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Syntax highlighting for pixi.toml files.
+                "tamasfe.even-better-toml"
+            ]
+        }
+    }
+}
