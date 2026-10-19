@@ -161,6 +161,11 @@ on the class website.
 
 ## What's in this repository
 
--   `README.md`: this file.
--   `.devcontainer/devcontainer.json`: tells GitHub how to set up your
+-   `README.md`: This file.
+-   `.devcontainer/devcontainer.json`: Tells GitHub how to set up your
     codespace (which operating system to use and what to install).
+-   LICENSE: Text file of the CC0 license.
+
+# License
+
+This work is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
