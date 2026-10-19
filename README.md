@@ -2,7 +2,7 @@
 
 This repository is a starting point for your own computational biology
 project.
-It sets you up with a ***codespace***: a Linux computer in the cloud that you
+It sets you up with a ***codespace***: A Linux computer in the cloud that you
 use through your web browser.
 Your codespace comes with:
 
@@ -156,7 +156,7 @@ Stopping a codespace does ***not*** delete your files.
 Everything above also works on your own computer.
 Once git and pixi are installed, the commands are the same.
 See the
-[instructions for running marimo on your own computer](CLASS-SITE-URL/marimo-local.html)
+[instructions for running marimo on your own computer](https://phyletica.org/intro-to-comp-bio/marimo-local.html)
 on the class website.
 
 ## What's in this repository
